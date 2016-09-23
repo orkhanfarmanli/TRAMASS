@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','name', 'address',
     ];
 
     /**
@@ -27,4 +27,22 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+public function cities(){
+
+    return $this->belongsTo(City::class);
+}
+
+public function products(){
+
+    return $this->hasMany(Product::class);
+}
+
+public function order(){
+
+    return $this->hasMany(Product::class);
+}
+
+
 }
