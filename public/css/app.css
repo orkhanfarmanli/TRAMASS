@@ -58,7 +58,7 @@
         color: white;
         transition: all 0.3s linear; }
         #header .navbar-right li a:active, #header .navbar-right li a:hover {
-          background-color: transparent;
+          background-color: transparent !important;
           color: #C9DB22;
           border-bottom: 3px solid #AEBE27; }
   #header h1, #header h3 {
@@ -678,7 +678,7 @@ html {
   color: #858585;
   padding: 20px; }
   #signin label, #signup label {
-    text-align: left; }
+    float: left; }
   #signin .col-md-4 > h2, #signup .col-md-4 > h2 {
     margin-top: 30px;
     color: #777777; }

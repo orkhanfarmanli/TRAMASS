@@ -1,6 +1,7 @@
 @extends('layouts.main_layout')
 
 
+
 @section('content')
 
 <div class="container-fluid" id="profile">
@@ -9,17 +10,20 @@
                     <div class=" col-md-9">
                         <div class="row">
                             <div class="col-md-3">
-                                <img src="img/dummy.png" alt="..." class="img-circle img-responsive">
-                                
+                                <img src="/img/dummy.png" alt="..." class="img-circle img-responsive">
+
                             </div>
                             <div class="col-md-9">
                                 <!--info about man-->
-                                <h2 class="text-uppercase">person name <a href="change_profile.php">
+                                <h2 class="text-uppercase"> {{ $user->name }} {{  $user->surname }}
 
             <!--change-profile link-->
-                                 <i class="fa fa-pencil-square-o" aria-hidden="true" style="float: right;"></i></a>
+                                
+                                <a href="/cnprofile">
+                                       <i class="fa fa-pencil-square-o" aria-hidden="true" style="float: right;"></i>
+                                </a>
                                 </h2>
-                                <p>No discription is available</p>
+                                <p>No description is available</p>
                                 <!--Table about planted absorbed participated;-->
                                 <table class=" table" style=" border-top-style:hidden;">
                                     <tbody>
@@ -37,12 +41,12 @@
                                             <td> Participated</td>
                                         </tr>
                                     </tbody>
-                                    
+
                                 </table>
 <!--button for invest-->
                                 <div class="text-left">
-                                    <a type="button" class="btn btn-success btn-lg" href="#">Invest in a crop</a>
-                                    
+                                    <a type="button" class="btn btn-success btn-lg" href="/product">Invest in a crop</a>
+
                                     <!-- <a type="button" class="btn btn-success btn-lg btn-block">Invest in a crop</a> -->
                                 </div>
                             </div>
@@ -57,7 +61,7 @@
                                 <ul class="media-list">
                                     <li class="media">
                                         <a class="media-left" href="#">
-                                            <img class="media-object image-responsive" src="img/avo.jpg" alt="Generic placeholder image">
+                                            <img class="media-object image-responsive" src="/img/avo.jpg" alt="Generic placeholder image">
                                         </a>
                                         <div class="media-body">
                                             <h3 class="media-heading"><a href="#">Avokado</a></h3>
@@ -66,7 +70,7 @@
                                         <i class="fa fa-bookmark" aria-hidden="true"></i>&nbsp Payment Pending</p>
                                     </div>
                                 </li>
-                                
+
                             </ul>
                         </div>
 
@@ -76,7 +80,7 @@
                                 <tbody>
                                     <tr>
                                         <td class="pull-right" style="border-top-style:hidden;">
-                                            
+
                                             Seed Planted
                                         </td>
                                         <td>
@@ -86,7 +90,7 @@
                                     </tr>
                                     <tr>
                                         <td class="pull-right" style="border-top-style:hidden;">
-                                            
+
                                             Seed Planted
                                         </td>
                                         <td>
@@ -95,11 +99,11 @@
                                         <td> Participated</td>
                                     </tr>
                                 </tbody>
-                                
+
                             </table>
                         </div>
-                        
-                        
+
+
                     </div>
                     <hr>
                     <!--seed part-->
@@ -120,19 +124,19 @@
                         </div>
                         <!--line which scrol(left-right)-->
                         <div class="col-md-6 line">
-                        
+
                         </div>
                         <br>
                         <!-- button part end-->
 
                         <!--part where we put some information-->
                         <div class="col-md-12 text-center leftInfo" >
-                        <img src="img/empty-state.png" class="img-responsive" alt="Responsive image">
+                        <img src="/img/empty-state.png" class="img-responsive" alt="Responsive image">
                         <p class="text-center">Whoops you don't have any on planting seed</p>
                         </div>
 
                         <div class="col-md-12 text-center rightInfo" style="display: none">
-                        <img src="img/empty-state.png" class="img-responsive" alt="Responsive image">
+                        <img src="/img/empty-state.png" class="img-responsive" alt="Responsive image">
                         <p class="text-center">Whoops Bla bla bla</p>
                         </div>
                     </div>
@@ -141,19 +145,19 @@
 
 
                 <!--right part (global col-md-3)-->
-                
+
                 <div class="col-md-3">
 
                 <!--part about time -->
                     <div class="upcoming">
-                        
+
                         <h3 class="text-capitalize text-left">
                         Upcoming Harvest
                         </h3>
                         <hr>
                           <ul class="media-list">
                                     <li class="media">
-                                       
+
                                         <div class="media-body">
                                             <h3 class="media-heading"><a href="#">Avokado</a></h3>
                                             <p><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp <a href = "#">Tanjung Lesung Agropolis</a>
@@ -161,9 +165,9 @@
                                         <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp  10 September 2020</p>
                                     </div>
                                 </li>
-                                
+
                             </ul>
-                          
+
                         <p class="text-center">There is no upcoming harvest </p>
                     </div>
                     <!--end time part-->
@@ -178,7 +182,7 @@
                         <ul class="media-list">
                             <li class="media">
                                 <a class="media-left" href="#">
-                                    <img class="media-object" src="img/dummy.png" alt="Generic placeholder image">
+                                    <img class="media-object" src="/img/dummy.png" alt="Generic placeholder image">
                                 </a>
                                 <div class="media-body">
                                     <span class="media-heading">Irma R Thala has planted crop</span>
@@ -186,10 +190,10 @@
                                 </div>
                                 <p>1 day ago</p>
                             </li>
-                            
+
                             <li class="media">
                                 <a class="media-left" href="#">
-                                    <img class="media-object" src="img/dummy.png" alt="Generic placeholder image">
+                                    <img class="media-object" src="/img/dummy.png" alt="Generic placeholder image">
                                 </a>
                                 <div class="media-body">
                                     <span class="media-heading">Irma R Thala has planted crop</span>
@@ -199,7 +203,7 @@
                             </li>
                             <li class="media">
                                 <a class="media-left" href="#">
-                                    <img class="media-object" src="img/dummy.png" alt="Generic placeholder image">
+                                    <img class="media-object" src="/img/dummy.png" alt="Generic placeholder image">
                                 </a>
                                 <div class="media-body">
                                     <span class="media-heading">Irma R Thala has planted crop</span>
@@ -207,10 +211,10 @@
                                 </div>
                                 <p>1 day ago</p>
                             </li>
-                            
-                            
+
+
                         </ul>
-                        
+
                     </div>
 
                     <!--end investment part-->
@@ -236,7 +240,7 @@
                         </span>
                     </div>
                     <!--end info part-->
-                    
+
                 </div>
             </div>
         </div>
@@ -252,7 +256,7 @@
 
  $(document).ready(function(){
 
-    $("#left").click(function(){ 
+    $("#left").click(function(){
         $(".line").animate({
         "left":"0%"
     },500);
@@ -260,7 +264,7 @@
          $("#right").css("border-bottom","");*/
     $(".seed")
     $(".rightInfo")
-    .hide(); 
+    .hide();
     $(".leftInfo")
     .show();
 
@@ -272,16 +276,14 @@
         $(".line").animate({
         "left":"50%"
     },500);
-         /*$(this) 
+         /*$(this)
         .css("border-bottom","2px solid gray");
         $("#left").css("border-bottom","#417630");*/
         $(".seed")
-         $(".leftInfo").hide(); 
+         $(".leftInfo").hide();
          $(".rightInfo").show();
 
     })
 });
 </script>
 @endsection
-
-

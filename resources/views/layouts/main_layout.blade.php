@@ -43,15 +43,16 @@
                                               <li><a href="{{ url('/register') }}">SIGN UP</a></li>
 
                                       @else
-                                          <li class="dropdown">
-                                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                                  {{ Auth::user()->name }} <span class="caret"></span>
+                                          <li class="active"><a href="{{ url('/') }}">HOME</a></li>
+                                          <li><a href="{{ url('/about') }}">ABOUT US</a></li>
+                                          <li>
+                                              <a href="/profile/{{ Auth::user()->id }}"role="button" aria-expanded="false">
+                                                  {{ Auth::user()->name}}
                                               </a>
 
-                                              <ul class="dropdown-menu" role="menu">
-                                                  <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                                              </ul>
                                           </li>
+                                          <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+
                                       @endif
                                 </ul>
                           </div>
@@ -72,7 +73,7 @@
                                 <div class="navbar-header">
 
                                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                                        <a class="navbar-brand" href="{{ url('/') }}"><span>T</span></a>
+                                        <a class="navbar-brand" href="#"><span>T</span></a>
                                     </button>
 
                                     <a class="hidden-xs  navbar-brand" href="{{ url('/')}}"><span>TRA</span>MASS</a>
@@ -90,15 +91,16 @@
                                                 <li><a href="{{ url('/register') }}">SIGN UP</a></li>
 
                                         @else
-                                            <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                            <li class="active"><a href="{{ url('/') }}">HOME</a></li>
+                                            <li><a href="{{ url('/about') }}">ABOUT US</a></li>
+                                            <li>
+                                                <a href="/profile/{{ Auth::user()->id }}" role="button" aria-expanded="false">
+                                                    {{ Auth::user()->name }}
                                                 </a>
 
-                                                <ul class="dropdown-menu" role="menu">
-                                                    <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                                                </ul>
                                             </li>
+                                            <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+
                                         @endif
                                   </ul>
 

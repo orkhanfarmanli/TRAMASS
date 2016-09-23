@@ -14,8 +14,16 @@
                            <button class="btn defaultButton">READ MORE
                                <div></div>
                            </button>
-                           <button class="btn successButton">JOIN US
-                           </button>
+                           @if(Auth::guest())
+                           <a class="btn successButton" href="/register">JOIN US
+                           </a>
+
+                            @else
+
+                            <a class="btn successButton" href="/profile/{{ Auth::user()->id }}">PROFILE
+                            </a>
+
+                            @endif
                       </div>
                   <div class="row">
                       <div id="header_carousel" class="slide_carousel carousel slide" data-ride="carousel">
@@ -37,8 +45,8 @@
                   </div>
 
 @endsection
-        
-        
+
+
 @section('content')
 
         <!-- welcome start -->

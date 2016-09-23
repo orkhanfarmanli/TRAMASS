@@ -12,9 +12,9 @@ class PagesController extends Controller
         return view('home');
     }
 
-    public function profile(){
-        return view('profile');
-    }
+    // public function profile(){
+    //     return view('profile');
+    // }
 
     public function cnprofile(){
     	return view('cnprofile');
@@ -23,16 +23,11 @@ class PagesController extends Controller
     public function about(){
     	return view('about');
     }
-    // public function login(){
-    // 	return view('login');
-    // }
-    //
-    // public function register(){
-    // 	return view('register');
-    // }
-    //
-    // public function forgot_password(){
-    //     return view('reset');
-    // }
+    public function product() {
+  		return view('product');
+    }
+  	public function product_single() {
+  		return view('product_single');
+    }
 
 }

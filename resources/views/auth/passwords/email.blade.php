@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                
+
                     <h2>Reset Password</h2>
                     <div class="panel-body">
                         @if (session('status'))

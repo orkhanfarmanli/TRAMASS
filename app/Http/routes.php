@@ -12,20 +12,24 @@
 */
 
 Route::get('/','PagesController@home');
-
-
+Route::get('/home','PagesController@home');
 Route::get('/about','PagesController@about');
-//
-// Route::get('/login','PagesController@login');
-// Route::get('/register','PagesController@register');
-// Route::get('/forgot_password', 'PagesController@forgot_password');
 
-    Route::auth();
 
+
+Route::auth();
 Route::group(['middleware' => 'auth'],function(){
 
-    Route::get('/profile-id=','PagesController@profile');
-    Route::get('/profile/cnprofile-id=','PagesController@cnprofile');
+    Route::get('/profile/{user}','ProfileController@show');
+    // Route::get('/profile/{user}','ProfileController@showMenu');
+
+    Route::get('/profile/cnprofile','PagesController@cnprofile');
+    Route::get('/product', 'PagesController@product');
+    Route::get('/product_single', 'PagesController@product_single');
+
+
+
+
 });
 
 //Route::get('/home', 'HomeController@index');
