@@ -6,6 +6,15 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+// Butun modeller 
+use App\City;
+use App\Basket;
+use App\Country;
+use App\Orders;
+use App\Product;
+use App\Product_Category;
+use App\User;
+
 class PagesController extends Controller
 {
     public function home(){
