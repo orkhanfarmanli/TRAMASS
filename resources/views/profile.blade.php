@@ -50,8 +50,9 @@
 <!--button for invest-->
                                 <div class="text-left">
                                     <a type="button" class="btn btn-success btn-lg" href="/product">Products</a>
-
-                                    <!-- <a type="button" class="btn btn-success btn-lg btn-block">Invest in a crop</a> -->
+                                    @if(Auth::user()->type)
+                                    <a type="button" class="btn btn-success btn-lg" href="/create_product/{{ Auth::user()->id }}">Create Product</a>
+                                    @endif
                                 </div>
 
                             </div>

@@ -21,7 +21,7 @@ Route::auth();
 Route::group(['middleware' => 'auth'],function(){
 
     Route::get('/profile/{id}/','ProfileController@profile');
-
+    Route::get('/create_product/{id}','ProfileController@create_product');
     Route::post('/profile/{id}/','ProfileController@change_profile');
 
     Route::get('/cnprofile/{id}','ProfileController@cnprofile');

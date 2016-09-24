@@ -20,42 +20,30 @@ class ProfileController extends Controller
       if($id == $user->id){
         return view('cnprofile',compact('user'));
       } else {
-        return view('home');
+        return view('errors.503');
       }
     }
 
     public function change_profile(){
       if(isset($_POST['change_profile'])){
+        $user = Auth::user();
           if(isset($_POST['seller_status'])){
-              $user = Auth::user();
               $user->type = 1;
-              $user->save();
-              // $status = 1;
-              return redirect()->action('ProfileController@profile', ['id' => Auth::user()->id]);
           } else {
-              $user = Auth::user();
               $user->type = 0;
-              $user->save();
-              return redirect()->action('ProfileController@profile', ['id' => Auth::user()->id]);
-              
           }
+          $user->save();
+          return redirect()->action('ProfileController@profile', ['id' => Auth::user()->id]);
       }
     }
 
-    public function show(User $user)
+    public function create_product($id)
     {
-        // return $user;
-
-        if($user->id == Auth::user()->id){
-            return view('profile' , compact('user'));
+        $user = Auth::user();
+        if($id == $user->id){
+          return view('create_product');
         } else {
-            return view('/home');
+          return view('errors.503');
         }
     }
-    // public function showMenu(User $user)
-    // {
-    //     // return $user;
-    //
-    //     return view('layouts.main_layout' , compact('user'));
-    // }
 }
