@@ -15,7 +15,8 @@ Route::get('/','PagesController@home');
 Route::get('/home','PagesController@home');
 Route::get('/about','PagesController@about');
 
-
+Route::get('/user_profile','AdminController@user');
+Route::get('/admin','AdminController@index');
 
 Route::auth();
 Route::group(['middleware' => 'auth'],function(){

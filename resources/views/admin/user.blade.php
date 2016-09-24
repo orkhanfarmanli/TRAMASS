@@ -14,9 +14,15 @@
     <div class="container">
       <h1>Crud Grid</h1>
       <div class="col-md-8">
-        <a href="/" class="btn btn-primary" type="button" >Home</a>
-        <a href="/" class="btn btn-primary" type="button" >About us</a><br><br>
-        <a href="/user_profile" class="btn btn-primary" type="button" >Users</a>
+        <table class="table table-bordered">
+          <tr>
+            <th>Id</th>
+            <th>Name Surname</th>
+            <th>City</th>
+            <th><a href="/Products">Products</a> </th>
+            <th>Type</th>
+          </tr>
+        </table>
       </div>
       <a href="/" class="btn btn-primary" type="button" >Back To index</a>
     </div>
