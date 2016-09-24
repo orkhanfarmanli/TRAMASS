@@ -8,7 +8,7 @@ class User extends Authenticatable
 {
 
 
-    
+
 
     /**
      * The attributes that are mass assignable.
@@ -29,20 +29,20 @@ class User extends Authenticatable
     ];
 
 
-public function cities(){
+    public function cities(){
 
-    return $this->belongsTo(City::class);
-}
+        return $this->belongsTo(City::class);
+    }
 
-public function products(){
+    public function products(){
 
-    return $this->hasMany(Product::class);
-}
+        return $this->hasMany(Product::class);
+    }
 
-public function order(){
+    public function order(){
 
-    return $this->hasMany(Product::class);
-}
+        return $this->hasMany(Product::class);
+    }
 
 
 }

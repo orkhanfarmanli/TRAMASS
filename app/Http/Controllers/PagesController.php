@@ -22,20 +22,7 @@ class PagesController extends Controller
         return view('home');
     }
 
-    public function profile($id){
-        $user = User::find($id);
-        return view('profile' , compact('user'));
-    }
 
-    public function cnprofile($id){
-      $user = Auth::user();
-
-      if($id == $user->id){
-        return view('cnprofile',compact('user'));
-      } else {
-        return view('home');
-      }
-    }
 
     public function about(){
     	return view('about');

@@ -20,10 +20,11 @@ Route::get('/about','PagesController@about');
 Route::auth();
 Route::group(['middleware' => 'auth'],function(){
 
-    Route::get('/profile/{id}/','PagesController@profile');
-    // Route::get('/profile/{user}','ProfileController@showMenu');
+    Route::get('/profile/{id}/','ProfileController@profile');
 
-    Route::get('/cnprofile/{id}','PagesController@cnprofile');
+    Route::post('/profile/{id}/','ProfileController@change_profile');
+
+    Route::get('/cnprofile/{id}','ProfileController@cnprofile');
     Route::get('/product', 'PagesController@product');
     Route::get('/product_single', 'PagesController@product_single');
 

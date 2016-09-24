@@ -25,7 +25,8 @@
                         <div class="card">
 
                         <!--start all post part-->
-                        <form method="post">
+                        <form method="post" action="/profile/{{$user->id}}  " >
+                          {{ csrf_field() }}
                         <!--picure post part-->
                             <div class="card-block"> Picture </div>
                             <br>
@@ -94,6 +95,11 @@
                                 <span class="text-left">*informasi No Telephone tidak dipublikasikan</span>
                             </div>
 
+                            <div class="form-group">
+                                <label for="telephone">Seller status</label>
+                                <input type="checkbox" name="seller_status" value="1"   @if(Auth::user()->type) checked value="0" @endif  > 
+                            </div>
+
                             <h3 class="text-capitalize">Informasi Ahli Waris</h3>
                             <div class="form-group">
                                 <label for="informasi">Nama Ahli Waris</label>
@@ -110,7 +116,7 @@
                                 <textarea name="" cols="30" class="form-control" rows="2" id="ealmat"></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-success btn-lg text-capitalize pull-right">Update profile</button>
+                            <button type="submit" name="change_profile" formnovalidate="" class="btn btn-success btn-lg text-capitalize pull-right">Update profile</button>
                         </form>
 
                         <!--end -->
