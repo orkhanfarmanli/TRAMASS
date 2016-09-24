@@ -2,9 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+// Butun modeller
+use App\City;
+use App\Basket;
+use App\Country;
+use App\Orders;
+use App\Product;
+use App\Product_Category;
+use App\User;
+
 
 class PagesController extends Controller
 {
@@ -12,12 +22,19 @@ class PagesController extends Controller
         return view('home');
     }
 
-    // public function profile(){
-    //     return view('profile');
-    // }
+    public function profile($id){
+        $user = User::find($id);
+        return view('profile' , compact('user'));
+    }
 
-    public function cnprofile(){
-    	return view('cnprofile');
+    public function cnprofile($id){
+      $user = Auth::user();
+
+      if($id == $user->id){
+        return view('cnprofile',compact('user'));
+      } else {
+        return view('home');
+      }
     }
 
     public function about(){

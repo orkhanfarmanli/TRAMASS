@@ -16,12 +16,16 @@
                             <div class="col-md-9">
                                 <!--info about man-->
                                 <h2 class="text-uppercase"> {{ $user->name }} {{  $user->surname }}
+                                @if($user->id == Auth::user()->id)
 
-            <!--change-profile link-->
-                                
-                                <a href="/cnprofile">
-                                       <i class="fa fa-pencil-square-o" aria-hidden="true" style="float: right;"></i>
-                                </a>
+
+              <!--change-profile link-->
+
+                                  <a href="/cnprofile/{{ $user->id }}">
+                                         <i class="fa fa-pencil-square-o" aria-hidden="true" style="float: right;"></i>
+                                  </a>
+
+                                @endif
                                 </h2>
                                 <p>No description is available</p>
                                 <!--Table about planted absorbed participated;-->
@@ -45,10 +49,11 @@
                                 </table>
 <!--button for invest-->
                                 <div class="text-left">
-                                    <a type="button" class="btn btn-success btn-lg" href="/product">Invest in a crop</a>
+                                    <a type="button" class="btn btn-success btn-lg" href="/product">Products</a>
 
                                     <!-- <a type="button" class="btn btn-success btn-lg btn-block">Invest in a crop</a> -->
                                 </div>
+
                             </div>
                         </div>
                         <!--penting part-->

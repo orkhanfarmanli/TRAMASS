@@ -8,7 +8,7 @@ class User extends Authenticatable
 {
 
 
-
+    
 
     /**
      * The attributes that are mass assignable.
@@ -27,4 +27,22 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+public function cities(){
+
+    return $this->belongsTo(City::class);
+}
+
+public function products(){
+
+    return $this->hasMany(Product::class);
+}
+
+public function order(){
+
+    return $this->hasMany(Product::class);
+}
+
+
 }

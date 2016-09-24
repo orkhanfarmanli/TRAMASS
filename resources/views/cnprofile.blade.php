@@ -1,4 +1,4 @@
-@extends('profile')
+@extends('layouts.main_layout')
 
 
 @section('content')
@@ -14,8 +14,8 @@
                         <h2 class="text-capitalize">Edit Profile</h2>
                             <hr>
                     </div>
-                    
-                    
+
+
                 </div>
                 <!-- end title-->
 
@@ -35,17 +35,17 @@
 
 
                                     <i id="click_trigger" class="fa fa-camera fa-2x btn btn-default btn-file" aria-hidden="true">
-                                        
+
                                     </i>
                                     <input  id="click_submit" type="file" name="..." value="select" style="display:none;">
 
 
                                     <h3 class="text-center text-capitalize">change picture</h3>
-                                    
+
                                 </div>
-                                
-                                
-                            </div> 
+
+
+                            </div>
 
 <!--end img post part-->
 
@@ -61,8 +61,8 @@
 
                     <!--start another info inputs-->
                     <div class="col-md-9">
-                        
-                            
+
+
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Password</label>
                                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
@@ -93,32 +93,32 @@
                                 <input type="text" class="form-control" id="telephone" value="o">
                                 <span class="text-left">*informasi No Telephone tidak dipublikasikan</span>
                             </div>
-                            
+
                             <h3 class="text-capitalize">Informasi Ahli Waris</h3>
                             <div class="form-group">
                                 <label for="informasi">Nama Ahli Waris</label>
                                 <input type="text" class="form-control" id="informasi" value="o">
-                                
+
                             </div>
                             <div class="form-group">
                                 <label for="notelp">No Telp. Ahli Waris</label>
                                 <input type="text" class="form-control" id="notelp" value="o">
-                                
+
                             </div>
                             <div class="form-group">
                                 <label for="almat">Alamat Ahli Waris</label>
                                 <textarea name="" cols="30" class="form-control" rows="2" id="ealmat"></textarea>
                             </div>
-                            
+
                             <button type="submit" class="btn btn-success btn-lg text-capitalize pull-right">Update profile</button>
                         </form>
 
                         <!--end -->
-                        
-                        
+
+
                     </div>
-                    
-                    
+
+
                 </div>
             </div>
         </div>
@@ -135,7 +135,7 @@
         $('.photo').mouseleave(function(){
             $('.caption').fadeOut();
         })
-        
+
         $("#click_trigger").click(function() {
             $("#click_submit").click();
         });
