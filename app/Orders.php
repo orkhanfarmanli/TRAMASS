@@ -6,16 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Orders extends Model
 {
-    //
 
-   public function users(){
-  	
-        return $this->belongsTo(User::class);
-   }
+     public function users()
+     {
+          return $this->belongsTo(User::class);
+     }
 
+     public function baskets()
+     {
 
-   public function baskets(){
-
-   	return $this->hasMany(Basket::class);
-   }
+          return $this->hasMany(Basket::class);
+     }
 }

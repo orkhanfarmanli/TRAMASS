@@ -7,13 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class City extends Model
 {
 
-  public function country(){
+     public function country()
+     {
 
-        return $this->belongsTo(Country::class);
-   }
+          return $this->belongsTo(Country::class);
+     }
 
-   public function users(){
+     public function users()
+     {
 
-   	 return $this->hasMany(User::class);
-   }
+          return $this->hasMany(User::class);
+     }
 }

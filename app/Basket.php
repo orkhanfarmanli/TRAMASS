@@ -6,15 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Basket extends Model
 {
-    //
-    public function orders(){
+     //
+     public function orders()
+     {
 
-        return $this->belongsTo(Order::class);
-   }
+          return $this->belongsTo(Order::class);
+     }
 
+     public function products()
+     {
 
-   public function products(){
-
-        return $this->belongsTo(Product::class);
-   }
+          return $this->belongsTo(Product::class);
+     }
 }

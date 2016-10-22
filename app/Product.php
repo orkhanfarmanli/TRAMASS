@@ -7,21 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
 
- protected $fillable = [
-        'discription', 'count', 'price', 'img', 'title'
-    ];
+     protected $fillable = [
+          'discription', 'count', 'price', 'img', 'title',
+     ];
 
-   public function users(){
+     public function users()
+     {
 
-   	return $this->belongsTo(User::class);
-   } 
+          return $this->belongsTo(User::class);
+     }
 
+     public function baskets()
+     {
 
-   public function baskets(){
-
-   	return $this->hasMany(Basket::class);
-   }
-
-
+          return $this->hasMany(Basket::class);
+     }
 
 }
