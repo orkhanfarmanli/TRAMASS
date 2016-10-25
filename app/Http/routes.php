@@ -20,7 +20,6 @@ Route::get('/admin','AdminController@index');
 
 Route::auth();
 Route::group(['middleware' => 'auth'],function(){
-
     Route::get('/profile/{id}/','ProfileController@profile');
     Route::get('/create_product/{id}','ProfileController@create_product');
     Route::post('/profile/{id}/','ProfileController@change_profile');
@@ -28,10 +27,4 @@ Route::group(['middleware' => 'auth'],function(){
     Route::get('/cnprofile/{id}','ProfileController@cnprofile');
     Route::get('/product', 'PagesController@product');
     Route::get('/product_single', 'PagesController@product_single');
-
-
-
-
 });
-
-//Route::get('/home', 'HomeController@index');
